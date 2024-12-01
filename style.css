@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+
+}
+h1 {
+  margin: 0;
+  padding-top: 15px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 75px;
+  padding: 0 25px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  height: 12vh;
+  background-color: #e2e2e2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.links-container ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  list-style: none;
+  width: fit-content;
+}
+
+.links-container li {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+}
+.links-container li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  border-radius: 4px;
+  scale: 0 1;
+  transform-origin: center;
+  transition: scale 0.35s;
+  color: #ffffff;
+}
+.links-container li:hover::before {
+  scale: 1;
+}
+
+.links-container a.active::before {
+  color: #ffffff;
+  transition: 0.4s;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  border-radius: 4px;
+  scale: 1 1;
+}
+
+.links-container a {
+  text-decoration: none;
+  color: rgb(128, 0, 128);
+  font-weight: 400;
+  font-family: "Exo 2", sans-serif;
+  font-size: 1.3em;
+  filter: drop-shadow(2px 2px 15px rgb(128, 0, 128, 0.8));
+}
+
+#hero {
+  background: url(/imagens/1.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #c9c9c9;
+  flex-direction: column;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+#hero h1 {
+  padding: 0;
+  width: 50%;
+  height: 10vh;
+  font-size: 4em;
+  font-family: "Exo 2", sans-serif;
+  margin: 0;
+  text-align:start;
+  text-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
+  margin-bottom: 1.7em;
+}
+
+.hero-container h1::after {
+  content: "|";
+  margin-left: 5px;
+  opacity: 1;
+  animation: pisca 0.9s infinite;
+  color: purple;
+}
+@keyframes pisca {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+#hero p {
+  font-family: "Exo 2", sans-serif;
+  font-size: 1.3em;
+  padding: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 0.5px solid rgb(128, 0, 128, 0.3);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+#projetos {
+  background-color: #c9c9c9;
+  height: 90vh;
+}
+#contatos {
+  background-color: #a1a1a1;
+  height: 90vh;
+}
+#skills {
+  background-color: #808080;
+  height: 90vh;
+}
+
+.img-container {
+  background-color: #000000;
+  width: 350px;
+  height: 350px;
+  margin: auto;
+  border-radius: 25% 45% 25% 20% / 5% 45% 5% 45%;
+  overflow: hidden;
+  filter: drop-shadow(2px 2px 10px #000000);
+}
+.img-container img {
+  max-width: 100%;
+}
+
+.whatsLink {
+  position: fixed;
+  bottom: 12px;
+  left: 12px;
+  filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.5));
+  height: 40px;
+  width: fit-content;
+  border-radius: 3px;
+  border: 0.5px solid rgb(0, 0, 0,0.4);
+  cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Exo 2", sans-serif;
+  font-size: 1em;
+  transition: .3s;
+  font-weight: bold;
+}
+.whatsLink:hover{
+  background-color: #800080;
+  color: #ffffff;
+}
+
+
+
+.contact-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: fit-content;
+}
+
+.contact-links li {
+  list-style: none;
+}
+
+.contact-links img {
+  width: 35px;
+  transition: 0.3s;
+  display: block;
+  opacity: 0.35;
+}
+.contact-links img:hover {
+  transform: translateY(-5px);
+}
+
+.contactMe_link button {
+  height: 40px;
+  width: 120px;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Exo 2", sans-serif;
+  font-size: .8em;
+  transition: .3s;
+  font-weight: bold;
+}
+
+.contactMe_link button:hover{
+  background-color: purple;
+}
+
