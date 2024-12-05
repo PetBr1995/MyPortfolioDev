@@ -9,7 +9,7 @@ menuItens.forEach((item) => {
 function scrollToIdOnClick(event) {
   event.preventDefault();
 
-  const to = getScrollTopByHref(event.target) - 75;
+  const to = getScrollTopByHref(event.target) - 90;
 
   scrolToPosition(to);
 }
